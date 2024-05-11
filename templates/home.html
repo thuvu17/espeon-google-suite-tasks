@@ -1,124 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Espeon Task</title>
+<title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content="856817536355-vpaqv9k121ko0dfhdhrt2krsr6uo97g4.apps.googleusercontent.com">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #53BEEC;
-  padding: 10px;
-  text-align: center;
-  font-size: 25px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width:35%;
-  height: 500px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-  margin-left:125px;
-  text-align: center;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  padding-top:20px;
-}
-
-a:link {
-  color: black;
-}
-
-a:visited {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 40%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
-}
-
-button {
-  float: center;
-  padding: 0px;
-  width: 40%;
-  background-color: #f1f1f1;
-  height: 100px; /* only for demonstration, should be removed */
-  text-align: center;
-}
-
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-section2::after {
-  content: "";
-  display: table;
-  clear: both;
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+<link rel="stylesheet" type="text/css" href="static/home.css">
 </head>
 <body style="background-color: #E5FCFC;">
 
 
 <header>
   <h2>Google Suite Manager Tool</h2>
-  <div class="g-signin2" data-onsuccess="onSignIn">Sign In</div>
 </header>
 
 <section2>
-  <button style="margin-left:125px;"> <a href="/home_GoogleMeet">
+  <button style="margin-left:125px;"> <a href="home_GoogleMeet.html">
       <h1 style="color:blue;"> Google Meet </h1> </a>
   </button>
-  <button style="margin:5px;"> <a href="/home_GoogleCalendar">
+  <button style="margin:5px;"> <a href="home_GoogleCalendar.html">
       <h1 style="color:red;"> Google Calendar </h1> </a>
   </button>
 </section2>
@@ -136,7 +36,7 @@ footer {
       <li><a href="#">Leadership Assignment</a></li>
     </ul>
   </nav>
-  
+
 
 </section>
 
@@ -145,16 +45,4 @@ footer {
 </footer>
 
 </body>
-
-<script>
-  function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Avoid sending this to your backend; use ID token instead
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
-  }
-  </script>
-
 </html>
-
