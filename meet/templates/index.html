@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Meet Test</title>
+
+    <style>
+        input {
+            width: 800px;
+        }
+    </style>
+</head>
+<body style="margin: 50px;">
+
+<br><br>
+
+<form action="api/create_space" method="post">
+    {% csrf_token %}
+    <button type="submit">Create Meeting</button>
+</form>
+
+<br><br>
+
+<form action="api/get_space" method="post">
+    {% csrf_token %}
+    <label>
+        <input name="name" type="text"/>
+    </label>
+    <button type="submit">Get Meeting</button>
+</form>
+
+<br><br>
+
+<form action="api/update_space" method="post">
+    {% csrf_token %}
+    <label>
+        <input name="name" type="text"/>
+    </label>
+    <button type="submit">Update Meeting</button>
+</form>
+
+<br><br>
+
+<form action="api/end_active_conference" method="post">
+    {% csrf_token %}
+    <label>
+        <input name="name" type="text"/>
+    </label>
+    <button type="submit">End Meeting</button>
+</form>
+
+<br><br>
+
+<a href="api/list_conference_records">Search All Meetings</a>
+
+<br><br>
+
+<form action="api/get_conference_record" method="post">
+    {% csrf_token %}
+    <label>
+        <input name="name" type="text"/>
+    </label>
+    <button type="submit">Search Specific Meeting</button>
+</form>
+
+<br><br>
+
+<form action="api/list_participants" method="post">
+    {% csrf_token %}
+    <label>
+        <input name="name" type="text"/>
+    </label>
+    <button type="submit">Search All Participants</button>
+</form>
+
+<br><br>
+
+<form action="api/get_participant" method="post">
+    {% csrf_token %}
+    <label>
+        <input name="name" type="text"/>
+    </label>
+    <button type="submit">Search Specific Participants</button>
+</form>
+
+<br><br>
+
+</body>
+</html>
