@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7af64a06-70a6-484f-9805-2629b33a57e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/static/home_GoogleCalendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_GoogleCalendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/static/home_GoogleMeet.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_GoogleMeet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/static/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_GoogleCalendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_GoogleCalendar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +126,7 @@
       <workItem from="1715386064726" duration="1545000" />
       <workItem from="1715387648610" duration="646000" />
       <workItem from="1715388943054" duration="154000" />
-      <workItem from="1715389113825" duration="5515000" />
+      <workItem from="1715389113825" duration="6236000" />
     </task>
     <servers />
   </component>
