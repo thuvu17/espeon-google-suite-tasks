@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Template</title>
+<title>Espeon Task</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="856817536355-vpaqv9k121ko0dfhdhrt2krsr6uo97g4.apps.googleusercontent.com">
 <style>
 * {
   box-sizing: border-box;
@@ -109,6 +111,7 @@ footer {
 
 <header>
   <h2>Google Suite Manager Tool</h2>
+  <div class="g-signin2" data-onsuccess="onSignIn">Sign In</div>
 </header>
 
 <section2>
@@ -142,5 +145,16 @@ footer {
 </footer>
 
 </body>
+
+<script>
+  function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Avoid sending this to your backend; use ID token instead
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail());
+  }
+  </script>
+
 </html>
 
