@@ -141,12 +141,33 @@
     text-decoration: none;
   }
 
-  header a {
+  
+  header h2 {
     text-decoration: none;
     font-size: 40px;
+    color: white;
   }
 
-  header a:hover {
+  header a {
+    text-decoration: none;
+  }
+
+  header h2:hover {
     font-size: 42px;
+  }
+
+  header p {
+    color: white;
+    font-size: 20px;
+  }
+
+  .sign-in-button {
+    border: transparent;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  header p:hover {
+    font-size: 22px;
   }
 
