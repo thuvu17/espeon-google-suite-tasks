@@ -1,6 +1,6 @@
 # Work description
 - Google sign in API: Joy
-- Google Calendar API: Max
+- Google Calendar API and everything else: Max
 - Google Meet API: Zhaoyan
 - Database for a reminder list (MongoDB): Thu
-- User interface and everything else: Angelica
+- User interface: Angelica
