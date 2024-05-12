@@ -17,12 +17,14 @@ jobs:
           command: pip install pdm
       - run:
           name: Install dependencies
-          command: pdm install
+          command: |
+            pdm install -r requirements.txt
       - run:
-          name: Run flake8
-          command: pdm run flake8
+          name: Run Flake8
+          command: |
+            pdm run flake8
       - run:
-          name: Run black
+          name: Run Black
           command: pdm run black --check .
       - run:
           name: Run tests
