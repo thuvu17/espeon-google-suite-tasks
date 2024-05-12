@@ -19,6 +19,12 @@ jobs:
           name: Install dependencies
           command: pdm install
       - run:
+          name: Run flake8
+          command: pdm run flake8
+      - run:
+          name: Run black
+          command: pdm run black --check .
+      - run:
           name: Run tests
           command: pdm run pytest tests/
 
