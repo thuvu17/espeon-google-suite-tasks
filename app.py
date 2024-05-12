@@ -17,6 +17,10 @@ def home_GoogleMeet():
 def home_GoogleCalendar():
     return render_template('home_GoogleCalendar.html', title='Google Calendar')
 
+@app.route('/sign_in')
+def sign_in():
+    return render_template('sign_in.html', title='Sign in')
+
 if __name__ == '__main__':
     # Run the Flask app
     app.run(debug=True, host='127.0.0.1', port=5000)
