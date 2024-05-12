@@ -107,3 +107,10 @@ This project is licensed under the Apache License 2.0 - see the `LICENSE` file f
 - This project uses GitHub Actions for continuous integration, which automatically runs tests and checks code formatting with Black.
 - The `.gitignore` file is configured to ignore Python-specific files and directories, such as `__pycache__` and the `venv` directory.
 - For more details on project organization and workflow management, refer to the documentation in the `docs` directory.
+
+## Contributors
+- Angelica Armstrong
+- Max Shi
+- Ngoc Minh Thu Vu
+- Yizhi(Joy) Zhu
+- Zhaoyan Zhu
