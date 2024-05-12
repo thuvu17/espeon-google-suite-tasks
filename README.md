@@ -8,6 +8,8 @@ The Google Suite Manager Tool is a web application designed to streamline the ma
 - **Google Meet Integration**: Direct access to Google Meet for quickly starting or scheduling meetings.
 - **Google Calendar Integration**: Easy access to Google Calendar to view, manage, and schedule events.
 - **Google Login**: Support login using a Google account.
+- **Task List**: A dedicated section for managing daily tasks and reminders directly from the homepage.
+
 
 ## Installation Instructions
 To set up the Google Suite Manager Tool on your local machine, follow these steps:
