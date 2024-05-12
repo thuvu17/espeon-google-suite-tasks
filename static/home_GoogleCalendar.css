@@ -171,3 +171,11 @@
     font-size: 22px;
   }
 
+  .calendar-container {
+    margin-left: 2rem;
+  }
+
+  .calendar {
+    text-align: center;
+  }
+
