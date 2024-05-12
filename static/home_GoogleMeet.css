@@ -4,6 +4,7 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #E5FCFC;
   }
   
   /* Style the header */
@@ -108,4 +109,63 @@
       width: 100%;
       height: auto;
     }
+  }
+
+  .meeting-button {
+    margin-left:125px;
+  }
+
+  .meeting-title {
+    color:blue;
+  }
+
+  .calendar-button {
+    margin:5px;
+  }
+
+  .calendar-title {
+    color:red;
+  }
+
+  .to-do-list-title {
+    font-size:25px;
+  }
+
+  .home-title {
+    background-color:transparent;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    border: transparent;
+    text-decoration: none;
+  }
+
+  header h2 {
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+  }
+
+  header a {
+    text-decoration: none;
+  }
+
+  header h2:hover {
+    font-size: 42px;
+  }
+
+  header p {
+    color: white;
+    font-size: 20px;
+  }
+
+  .sign-in-button {
+    border: transparent;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  header p:hover {
+    font-size: 22px;
   }

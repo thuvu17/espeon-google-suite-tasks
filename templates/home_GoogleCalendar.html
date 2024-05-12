@@ -6,36 +6,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="static/home_GoogleCalendar.css">
 </head>
-<body style="background-color: #E5FCFC;">
+<body>
 
 
-<header>
-  <h2>Google Suite Manager Tool</h2>
-</header>
-
-<section2>
-  <button style="margin-left:125px;">
-      <h1 style="color:blue;"> Google Meet </h1>
-  </button>
-  <button style="margin:5px;">
-      <h1 style="color:red;"> Google Calendar </h1>
-  </button>
-</section2>
-
-<section>
-  <nav>
-    <h1 style="font-size:25px;"> To Do List: </h1>
-    <ul>
-      <li><u>London</u></li>
-      <li><u>Meeting w/ Prof</u></li>
-      <li><u>Coding HTML</u></li>
-      <li><u>Open Source HW#4</u></li>
-      <li><u>Team Meeting</u></li>
-      <li><u>Complete Forms</u></li>
-      <li><u>Leadership Assignment</u></li>
-    </ul>
-  </nav>
+  <header>
+    <button class="home-title"><a href="/">
+      <h2>Google Suite Manager Tool</h2></a></button>
+      <button class="sign-in-button"><a href="/sign_in">
+        <p>Sign In</p></a></button>
+  </header>
   
+  <section2>
+    <button class="meeting-button"> <a href="/home_GoogleMeet">
+        <h1 class="meeting-title"> Google Meet </h1> </a>
+    </button>
+    <button class="calendar-button"> <a href="/home_GoogleCalendar">
+        <h1 class="calendar-title"> Google Calendar </h1> </a>
+    </button>
+  </section2>
+  
+  <section>
+    <nav>
+      <h1 class="to-do-list-title"> To Do List: </h1>
+      <ul>
+        <li><a href="#">London</a></li>
+        <li><a href="#">Meeting w/ Prof</a></li>
+        <li><a href="#">Coding HTML</a></li>
+        <li><a href="#">Open Source HW#4</a></li>
+        <li><a href="#">Team Meeting</a></li>
+        <li><a href="#">Complete Forms</a></li>
+        <li><a href="#">Leadership Assignment</a></li>
+      </ul>
+    </nav>
+
   <article>
     <!-- <h1>London</h1> -->
     <label for="fname">Task: </label>
@@ -59,12 +62,17 @@
 
     <a href="/"><input type="submit" value="Submit"> </a>
 	<a href="/"><input type="submit" value="Cancel"> </a>
-   
+
     <!-- <button style="height:80px; margin-left: 150px; background-color: #81FFFF;"> <a href="./test.html">
      <h1 style="color:black;"> Save </h1></a>
     </button> -->
   </article>
 </section>
+
+<div>
+  <h2>Google Calendar</h2>
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&src=czExMjE2MjEwNTJAZ21haWwuY29t&src=Njg3OGJmODc3YjE4OGFiNGE5MzcxNDI5NDhmYjg5ZmZhYjE4ODMyMzU0MzY5ZmE4ZjcxNGZkOGY0YzdjMTVmNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MDcwMzQ1NTk1NzU3MTUwMjk1MzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23cc003c&color=%237986CB&color=%2333B679&color=%23F09300&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></iframe>
+</div>
 
 <footer>
   <p>Footer</p>
@@ -72,4 +80,3 @@
 
 </body>
 </html>
-
