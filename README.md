@@ -65,9 +65,24 @@ To run tests, execute:
 pdm run pytest
 ```
 
-## Contributing
+## Usage Instructions
 
-Contributions are welcome! We use GitHub to host code, to track issues and feature requests, and to accept pull requests.
+Once the application is running, navigate to http://127.0.0.1:5000/ in your web browser to access the Google Suite Manager Tool. From the homepage, you can access the following features:
+
+Click on the Google Meet button to navigate to the Google Meet section.
+Click on the Google Calendar button to view the calendar interface.
+Manage and view tasks in the To-Do List section on the homepage.
+
+## Contributing Guidelines
+
+Contributions to the Google Suite Manager Tool are welcome! Here’s how you can contribute:
+
+- Fork the Repository: Fork the project to your GitHub account.
+- Clone Your Fork: Make a local clone of your fork for development.
+- Create a New Branch: Create a new branch for each feature or improvement.
+- Make Changes: Implement your changes and commit them to your branch.
+- Push Changes: Push your changes to your fork on GitHub.
+- Submit a Pull Request: Open a pull request from your fork's branch to the original repository’s main branch.
 
 ### Bug Reports & Feature Requests
 
