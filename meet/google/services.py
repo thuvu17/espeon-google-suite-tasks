@@ -6,46 +6,44 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.apps import meet_v2
-from google.protobuf import field_mask_pb2
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/meetings.space.created']
+SCOPES = ["https://www.googleapis.com/auth/meetings.space.created"]
 
 
 def get_token():
-    """Shows basic usage of the Google Meet API.
-    """
+    """Shows basic usage of the Google Meet API."""
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    if os.path.exists("token.json"):
+        creds = Credentials.from_authorized_user_file("token.json", SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
-            creds = flow.run_local_server(port=0, success_message='认证成功')
+            flow = InstalledAppFlow.from_client_secrets_file
+            ("credentials.json", SCOPES)
+            creds = flow.run_local_server(port=0, success_message="认证成功")
         # Save the credentials for the next run
-        with open('token.json', 'w') as token:
+        with open("token.json", "w") as token:
             token.write(creds.to_json())
 
     return creds
 
 
-################################################################################################
+##############################################################################
 # meeting spaces
-################################################################################################
+##############################################################################
 # Create Meeting Space
 async def sample_create_space():
     # Create a client
     client = meet_v2.SpacesServiceAsyncClient(credentials=get_token())
 
     # Initialize request argument(s)
-    request = meet_v2.CreateSpaceRequest(
-    )
+    request = meet_v2.CreateSpaceRequest()
 
     # Make the request
     response = await client.create_space(request=request)
@@ -78,10 +76,10 @@ async def sample_update_space(name):
     # Initialize request argument(s)
     request = meet_v2.UpdateSpaceRequest(
         {
-            'space': {
-                'name': name,
+            "space": {
+                "name": name,
             },
-            'update_mask': {},
+            "update_mask": {},
         },
     )
 
@@ -106,17 +104,16 @@ async def sample_end_active_conference(name):
     await client.end_active_conference(request=request)
 
 
-################################################################################################
+##############################################################################
 # conferences
-################################################################################################
+##############################################################################
 # Search All Meetings
 async def sample_list_conference_records():
     # Create a client
     client = meet_v2.ConferenceRecordsServiceAsyncClient(credentials=get_token())
 
     # Initialize request argument(s)
-    request = meet_v2.ListConferenceRecordsRequest(
-    )
+    request = meet_v2.ListConferenceRecordsRequest()
 
     # Make the request
     page_result = await client.list_conference_records(request=request)
@@ -148,9 +145,9 @@ async def sample_get_conference_record(name):
     return response
 
 
-################################################################################################
+#######################################################################################
 # participants
-################################################################################################
+#######################################################################################
 # Search All Particpants
 async def sample_list_participants(name):
     # Create a client
@@ -183,9 +180,8 @@ async def sample_get_participant(name):
     # Make the request
     response = await client.get_participant(request=request)
 
-    # Handle the response
+    # Handle the response hy
     return response
-
 
 
 async def sample_list_participant_sessions(name):
@@ -193,9 +189,7 @@ async def sample_list_participant_sessions(name):
     client = meet_v2.ConferenceRecordsServiceAsyncClient(credentials=get_token())
 
     # Initialize request argument(s)
-    request = meet_v2.ListParticipantSessionsRequest(
-        parent=name
-    )
+    request = meet_v2.ListParticipantSessionsRequest(parent=name)
 
     # Make the request
     page_result = await client.list_participant_sessions(request=request)
@@ -206,15 +200,12 @@ async def sample_list_participant_sessions(name):
     #     print(response)
 
 
-
 async def sample_get_participant_session(name):
     # Create a client
     client = meet_v2.ConferenceRecordsServiceAsyncClient(credentials=get_token())
 
     # Initialize request argument(s)
-    request = meet_v2.GetParticipantSessionRequest(
-        name=name
-    )
+    request = meet_v2.GetParticipantSessionRequest(name=name)
 
     # Make the request
     response = await client.get_participant_session(request=request)
