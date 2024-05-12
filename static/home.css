@@ -4,6 +4,7 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #E5FCFC;
   }
   
   header {
@@ -89,3 +90,22 @@
     }
   }
   
+  .meeting-button {
+    margin-left:125px;
+  }
+
+  .meeting-title {
+    color:blue;
+  }
+
+  .calendar-button {
+    margin:5px;
+  }
+
+  .calendar-title {
+    color:red;
+  }
+
+  .to-do-list-title {
+    font-size:25px;
+  }
