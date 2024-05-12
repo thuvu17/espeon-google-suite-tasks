@@ -1,8 +1,16 @@
-# Python Project Template
+# Google Suite Manager Tool
 
-## Description
+## Project Purpose
+The Google Suite Manager Tool is a web application designed to streamline the management and access to various Google Suite services including Google Meet and Google Calendar. This tool provides a centralized platform for users to engage with Google services more efficiently, offering quick access links and features tailored for enhanced productivity.
 
-This repository serves as a Python project template, providing a foundation for designing and developing fully equipped projects. It includes configurations for continuous integration, static analysis, code style adherence, and dependency management with PDM.
+## Features
+- **Home Dashboard**: A central hub from which all services can be accessed.
+- **Google Meet Integration**: Direct access to Google Meet for quickly starting or scheduling meetings.
+- **Google Calendar Integration**: Easy access to Google Calendar to view, manage, and schedule events.
+- **Google Login**: Support login using a Google account.
+
+## Installation Instructions
+To set up the Google Suite Manager Tool on your local machine, follow these steps:
 
 ## Prerequisites
 
@@ -37,15 +45,18 @@ To set up the project environment:
    ```
    pdm install
    ```
-
+6. Install python Flask
+   ```
+   pip install Flask
+   ```
 ## Running the Application
 
 To run the application, use:
 ```
-pdm run python src/main.py
+pdm run python src/app.py
 ```
 
-Replace `src/main.py` with the path to your Python script.
+Replace `src/app.py` with the path to your Python script.
 
 ## Testing
 
