@@ -26,7 +26,9 @@ def get_token():
         else:
             flow = InstalledAppFlow.from_client_secrets_file
             ("credentials.json", SCOPES)
-            creds = flow.run_local_server(port=0, success_message="认证成功")
+            creds = flow.run_local_server(
+                port=0, success_message="Authentication successful"
+            )
         # Save the credentials for the next run
         with open("token.json", "w") as token:
             token.write(creds.to_json())

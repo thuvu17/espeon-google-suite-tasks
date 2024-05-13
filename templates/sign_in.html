@@ -4,7 +4,7 @@
 <title>Google Sign In</title>
 <meta charset="utf-8">
 <meta name="google-signin-client_id" content="856817536355-vpaqv9k121ko0dfhdhrt2krsr6uo97g4.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="../sign_in.js" defer type="module"></script>
 <script>
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
@@ -13,6 +13,13 @@
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     }
+</script>
+<script>
+    function init() {
+        gapi.load('auth2', function() {
+            /* Ready. Make a call to gapi.auth2.init or some other API */
+  });
+}
 </script>
 </head>
 
