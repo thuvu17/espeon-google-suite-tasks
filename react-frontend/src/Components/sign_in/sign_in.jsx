@@ -1,30 +1,22 @@
-import GoogleLogin from "react-google-login";
-
-const clientId = '856817536355-vpaqv9k121ko0dfhdhrt2krsr6uo97g4.apps.googleusercontent.com';
-
-function Login({ onSuccess }) {
-
-    const onSuccess =(res)=>{
-        console.log("LOGIN SUCCESS! Current user :" , res.profileObj);
-    }
-
-    const onFailure = (res) => {
-        console.log("LOGIN Failed! res:", res);
-    }
+import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
 
 
-    return (
-        <div id="signInButton">
-            <GoogleLogin
-                clientId={clientId}
-                buttonText="Login"
-                onSuccess={onSuccess}
-                onFailure={onFailure}
-                cookiePolicy={'single_host_origin'}
-                isSignedIn={true}
-            />
-        </div>
-    )
+function SignIn() {
+  return (
+    <GoogleOAuthProvider clientId="856817536355-vpaqv9k121ko0dfhdhrt2krsr6uo97g4.apps.googleusercontent.com">
+      <GoogleLogin
+          onSuccess={credentialResponse => {
+            const credentialResponseDecoded = jwtDecode(credentialResponse.credential);
+            console.log(credentialResponseDecoded);
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+      />
+    </GoogleOAuthProvider>
+    
+  );
 }
 
-export default Login
+export default SignIn;
